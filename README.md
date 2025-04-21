@@ -62,17 +62,21 @@ This prepares the dataset for Regenie Step 2. Commands may vary based on file fo
 
 **Suggested filters:**
 
-- Keep variants with MAC ≥ 30  
-- Remove variants with R² < 0.2  
-- Remove variants with missingness > 5%  
-- HWE P < 1e-12 for homogeneous populations only  
+- Keep variants with MAC ≥ 30
+- Remove variants with R² < 0.2
+- Remove variants with missingness > 5%
+- For homogeneous populations, exclude variants with Hardy-Weinberg Equilibrium (HWE)  P-value <1E-12
+- For admixed populations, HWE filtering will not be applied
 - Remove samples with >5% missingness  
+
+Again, filter variants first before sample-level missingness filtering. For HWE filtering, we currently exclude variants with HWE p-values < 1E-12 in the European and East Asian ancestry groups. We do not apply HWE filtering to other ancestry groups at this time.
 
 ---
 
-## Step 3: Regenie Step 1 – Ridge Regression
+## Step 3: Regenie Step 1: Ridge Regression
 
-Fit a whole-genome ridge regression model to estimate phenotype residuals, adjusting for age and top 10 principal components (PCs).
+This step performs firth logistic regression testing across imputed variants. Here is the example for association testing based on CHR22. 
+
 
 <details>
 <summary>Example Code</summary>
@@ -98,7 +102,7 @@ regenie --step 1 \
 
 ---
 
-## Step 4: Regenie Step 2 – Association Testing
+## Step 4: Regenie Step 2: Association Testing
 
 Performs Firth logistic regression testing across imputed variants.
 

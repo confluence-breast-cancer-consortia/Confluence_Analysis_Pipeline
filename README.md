@@ -22,7 +22,8 @@ We generate a pruned genotype dataset suitable for Step 1 of Regenie by selectin
 - Remove samples with missing variant rate > 5%  
 - LD-prune to reduce collinearity
 
-Note: Always filter variants before applying sample-level filters to avoid excess sample exclusions.
+Always filter variants first and create an updated dataset before applying sample-level missingness filters. If variant and sample filters are applied simultaneously in a single command, additional samples may be dropped due to temporary inclusion of low-quality variants.
+
 
 <details>
 <summary>Example Code</summary>
@@ -57,7 +58,7 @@ plink2 --bfile array_data_qc \
 
 ## Step 2: QC for Imputed Data
 
-This prepares the dataset for Regenie Step 2. Commands may vary based on file format (e.g., BGEN, VCF, or PLINK PGEN).
+This prepares the dataset for Regenie Step 2. Commands may vary based on file format (e.g., BGEN or PLINK PGEN).
 
 **Suggested filters:**
 
@@ -71,7 +72,7 @@ This prepares the dataset for Regenie Step 2. Commands may vary based on file fo
 
 ## Step 3: Regenie Step 1 – Ridge Regression
 
-Fit a whole-genome ridge regression model to estimate phenotype residuals, adjusting for age and top 10 principal components.
+Fit a whole-genome ridge regression model to estimate phenotype residuals, adjusting for age and top 10 principal components (PCs).
 
 <details>
 <summary>Example Code</summary>
@@ -149,5 +150,5 @@ regenie --step 2 \
 ---
 
 ## Notes
-This pipeline assumes BGEN or PGEN format for imputed data. Adjust flags accordingly. QC thresholds (e.g., MAC, INFO) may be tailored based on population structure or study goals.  
+This pipeline assumes BGEN or PGEN format for imputed data. Adjust flags accordingly. QC thresholds (e.g., MAC, INFO) may be tailored based on population structure.  
 

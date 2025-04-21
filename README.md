@@ -69,7 +69,9 @@ This prepares the dataset for Regenie Step 2. Commands may vary based on file fo
 - For admixed populations, HWE filtering will not be applied
 - Remove samples with >5% missingness  
 
-Again, filter variants first before sample-level missingness filtering. For HWE filtering, we currently exclude variants with HWE p-values < 1E-12 in the European and East Asian ancestry groups. We do not apply HWE filtering to other ancestry groups at this time.
+Again, filter variants first before sample-level missingness filtering. For HWE filtering, we currently exclude variants with HWE p-values < 1E-12 in the European and East Asian ancestry groups. We do not apply HWE filtering to other ancestry groups at this time. MAC is typically defined using the combined sample of cases and controls. This ensures stable effect size estimation and avoids filtering variants that are rare in one group but potentially informative overall.
+For ancestry-specific analyses, apply the MAC filter within the relevant stratum (e.g., MAC > 30 within each ancestry group).
+
 
 ---
 

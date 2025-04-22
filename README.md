@@ -66,10 +66,10 @@ This prepares the dataset for Regenie Step 2. Commands may vary based on file fo
 - Remove variants with R² < 0.2
 - Remove variants with missingness > 5%
 - For homogeneous populations, exclude variants with Hardy-Weinberg Equilibrium (HWE)  P-value <1E-12
-- For admixed populations, HWE filtering will not be applied
+- For hetergenous populations, HWE filtering will not be applied
 - Remove samples with >5% missingness  
 
-Again, filter variants first before sample-level missingness filtering. For HWE filtering, we currently exclude variants with HWE p-values < 1E-12 in the European and East Asian ancestry groups. We do not apply HWE filtering to other ancestry groups at this time. In this pipeline, we use the term heterogeneous populations to refer to ancestry groups with recent admixture or notable internal structure, such as African American, Latino, or other groups with multi-continental ancestry contributions. It can also include groups with historical founder effects or regional stratification (e.g., some South Asian populations), where population structure may lead to deviations from HWE that are not due to genotyping error. For these groups, we skip HWE filtering to avoid removing valid variants.
+Again, filter variants first before sample-level missingness filtering. For HWE filtering, we currently exclude variants with HWE p-values < 1E-12 in the European and East Asian ancestry groups. We define heterogeneous populations as those with recent admixture or notable population structure (e.g., African American, Latino, or some South Asian groups). Since HWE deviations in these populations may reflect structure rather than genotyping error, we skip HWE filtering for them to avoid removing valid variants.
 
 MAC is typically defined using the combined sample of cases and controls. For ancestry-specific analyses, apply the MAC filter within the relevant stratum (e.g., MAC > 30 within each ancestry group).
 

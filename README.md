@@ -92,7 +92,7 @@ regenie --step 1 \
   --phenoFile GSA_Reformatted_Phenotypes.validated.txt \
   --phenoColList Outcome \
   --covarFile GSA_Reformatted_Covariates.validated.txt \
-  --covarColList age,PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 \
+  --covarColList PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 \
   --strict \
   --bsize 1000 --bt \
   --lowmem --lowmem-prefix tmp_rg \
@@ -125,7 +125,7 @@ regenie --step 2 \
   --test additive \
   --gz --no-split \
   --covarFile GSA_Reformatted_Covariates.validated.txt \
-  --covarColList age,PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 \
+  --covarColList PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 \
   --strict \
   --out chr22_out
 ```
@@ -147,7 +147,7 @@ regenie --step 2 \
   --test additive \
   --gz --no-split \
   --covarFile GSA_Reformatted_Covariates.validated.txt \
-  --covarColList age,PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 \
+  --covarColList PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 \
   --strict \
   --out chr22_out
 ```

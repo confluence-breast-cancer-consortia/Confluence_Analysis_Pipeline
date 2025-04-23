@@ -63,7 +63,7 @@ This prepares the dataset for Regenie Step 2. Commands may vary based on file fo
 **Suggested filters:**
 
 - Keep variants with MAC ≥ 30
-- Remove variants with R² < 0.2
+- Remove variants with imputation R² < 0.2
 - Remove variants with missingness > 5%
 - For homogeneous populations, exclude variants with Hardy-Weinberg Equilibrium (HWE)  P-value <1E-12
 - For hetergenous populations, HWE filtering will not be applied

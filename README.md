@@ -1,8 +1,8 @@
 
 # Regenie GWAS Pipeline for Breast Cancer Analyses in Confluence
 
-## Notes
-This pipeline assumes BGEN or PGEN format for imputed data. Adjust flags accordingly. QC thresholds (e.g., MAC, INFO) may be tailored based on population structure. For overall, subtype-specific, or ancestry-specific breast cancer analyses, run Regenie separately for each analysis rather than using Regenie's multi-trait option in a single run. Because sample sizes vary substantially across subtypes and ancestries, the multi-trait function can cause issues in Regenie Step 1, leading to inflated standard error estimates.
+## Notes: This pipeline assumes BGEN or PGEN format for imputed data. Adjust flags accordingly. QC thresholds (e.g., MAC, INFO) may be tailored based on population structure. For overall, subtype-specific, or ancestry-specific breast cancer analyses, run Regenie separately for each analysis rather than using Regenie's multi-trait option in a single run. Because sample sizes vary substantially across subtypes and ancestries, the multi-trait function can cause issues in Regenie Step 1, leading to inflated standard error estimates.
+
 
 
 This pipeline runs Regenie for breast cancer GWAS using imputed genotype data. For full documentation, refer to the [official Regenie guide](https://rgcgithub.github.io/regenie/).

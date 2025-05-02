@@ -1,4 +1,4 @@
-# Confluence Analyses Plan for Studies Sharing GWAS Summary Statistics
+# Confluence Analyses Plan for GWAS and Biobanks Sharing GWAS Summary Statistics with the Confluence Project
 
 This document outlines the analysis plan for contributing GWAS summary results to the [Confluence](https://dceg.cancer.gov/research/cancer-types/breast-cancer/confluence-project) breast cancer genome-wide association study (GWAS) by contributing summary GWAS study results to a meta-analysis. Confluence is collaboration among breast cancer consortia to conduct the largest and most diverse breast cancer GWAS to date: it will include over 300,000 participants with breast cancer and 300,000 without, residing across six continents. GWAS summary statistics from the meta-analysis combining all participating consortia and studies will be made available to collaborators upon paper submission and be made available to the broader research community upon publication.
 

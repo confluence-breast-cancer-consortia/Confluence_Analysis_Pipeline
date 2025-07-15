@@ -132,7 +132,7 @@ regenie --step 2 \
   --covarFile GSA_Reformatted_Covariates.validated.txt \
   --covarColList PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 \
   --strict \
-  --af-ac \
+  --af-cc \
   --out chr22_out
 ```
 </details>
@@ -155,7 +155,7 @@ regenie --step 2 \
   --covarFile GSA_Reformatted_Covariates.validated.txt \
   --covarColList PC1,PC2,PC3,PC4,PC5,PC6,PC7,PC8,PC9,PC10 \
   --strict \
-  --af-ac \
+  --af-cc \
   --out chr22_out
 ```
 </details>
